@@ -23,6 +23,15 @@ url: "https://top.international" # the base hostname & protocol for your site, e
 
 # Collections
 collections_dir: collections
+collections:
+  markets:
+    output: false
+  products:
+    output: true
+  staff:
+    output: true
+  suppliers:
+    output: true
 
 # Build settings
 markdown: kramdown

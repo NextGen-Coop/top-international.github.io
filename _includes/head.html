@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="/assets/main.css">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
@@ -29,7 +29,7 @@
   <meta name="msapplication-TileImage" content="assets/ico/ms-icon-144x144.png">
   <meta name="theme-color" content="#{{ site.theme_color }}">
 
-  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.rss %}

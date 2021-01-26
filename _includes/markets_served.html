@@ -1,0 +1,15 @@
+<section class="home-region">
+
+  <h2 class="home-region-title">Markets We Serve</h2>
+
+  <div class="home-region-content">
+    {% if site.markets %}
+      <ul>
+      {% for market in site.markets %}
+        <li>{{ market.name }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+</section>
