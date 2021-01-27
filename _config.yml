@@ -17,15 +17,19 @@ title: Top International
 email: email@top.international
 description: >- # this means to ignore newlines until "baseurl:"
   We manufacture and distribute polymers and rubber compounds.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://top.international" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 
-# Collections
+## Collections ##
+# collections_dir points to the directory collections will live.
 collections_dir: collections
+
+# collections lists each collection and sets options for each one.
+# output: true is required if pages need to be rendered for each item.
 collections:
   markets:
-    output: false
+    output: true
   products:
     output: true
   staff:
