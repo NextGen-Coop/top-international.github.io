@@ -1,8 +1,10 @@
 ---
 ---
-$font_color: #080808
-$header_bg: rgb(171,205,239)
-$footer_bg: #616100
+$darkish: #080808
+$reddish: rgb(200, 50, 50)
+$lightish: rgb(250,250,250)
+$footer_font_color: $lightish
+$footer_bg: $reddish
 $main_bg: #f5deb3
 $nav_bg: #666666
 $author_bg: rgba(227, 242, 243, .75)
@@ -15,18 +17,24 @@ html
   margin: 0
 
 header
-  background-color: $header_bg
+  background-color: $lightish
 
 body
-  background-color: $main_bg
+  background-color: $lightish
   width: 100%
   margin: 0
   display: flex
   flex-flow: column nowrap
-  color: $font_color
+  color: $darkish
   font-weight: bold
+
+nav.site-nav
+  a:hover
+    color: $reddish
 
 footer
   order: 3
-  background: $footer_bg
-  color: $font_color
+  background: $reddish
+  color: $lightish
+  h4, ul, p
+    color: $lightish
