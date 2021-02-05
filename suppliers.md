@@ -10,7 +10,7 @@ menu: true
   <section class="collection {{ this_collection }}">
   {% for item in site.suppliers %}
     <div class="supplier" id="{{ item.slug }}">
-      <h3><a href="{{ item.url }}">{{ item.name }}</a></h3>
+      <h3><a href="{{ item.url | relative_url }}">{{ item.name }}</a></h3>
       {% if item.excerpt %}
         <p>{{ item.excerpt }}</p>
       {% endif %}
