@@ -9,7 +9,7 @@ menu: true
 {% if site.suppliers %}
   <section class="collection {{ this_collection }}">
   {% for item in site.suppliers %}
-    <div class="supplier" id="{{ item.slug }}">
+    <div class="supplier" id="{{ item.uuid }}">
       <h3><a href="{{ item.url | relative_url }}">{{ item.name }}</a></h3>
       {% if item.excerpt %}
         <p>{{ item.excerpt }}</p>
@@ -17,7 +17,9 @@ menu: true
       {% if item.request_info %}
         <p>Please contact us for information on {{ item.name }}</p>
       {% else %}
-        <p>Product list</p>
+        {% if site.products %}
+          {% include product-list.html supplier=item.uuid %}
+        {% endif %}
       {% endif %}
     </div>
   {% endfor %}
