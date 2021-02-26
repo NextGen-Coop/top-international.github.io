@@ -20,3 +20,4 @@ products:
     tds: cbk-chlorobutyl-tds.pdf
     sds: cbk-chlorobutyl-sds.pdf
 ---
+Describe this product here if desired. We can also add descriptions for individual products if needed.

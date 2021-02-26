@@ -5,6 +5,9 @@ layout: default
   {% assign title = page.name %}
   <h2 class="post-title">{{ title }}</h2>
   <div class="post-content">
+    {% if content %}
+      <p>{{ content }}</p>
+    {% endif %}
     {% assign product_type = site.products | where: "name", title | first %}
     {% if product_type %}
       <section>
@@ -29,7 +32,6 @@ layout: default
       {% endfor %}
       </section>
     {% endif %}
-    {{ content }}
   </div>
 
 </section>
