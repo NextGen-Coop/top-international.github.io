@@ -17,16 +17,16 @@ layout: default
             {{ product.name }}
           </div>
           {% if product.tds %}
-            {% assign tds = product.tds | prepend: "assets/products/" %}
+            {% assign tds = product.tds | prepend: "/assets/products/" %}
             <div class="product-tds">
-              <a href="{{ tds | absolute_url }}"
+              <a href="{{ tds | relative_url }}"
                 target="_blank">TDS</a>
             </div>
           {% endif %}
           {% if product.sds %}
-            {% assign sds = product.sds | prepend: "assets/products/" %}
+            {% assign sds = product.sds | prepend: "/assets/products/" %}
             <div class="product-sds">
-              <a href="{{ sds | absolute_url }}"
+              <a href="{{ sds | relative_url }}"
                 target="_blank">SDS</a>
             </div>
           {% endif %}
