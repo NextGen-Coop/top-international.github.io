@@ -1,10 +1,13 @@
 ---
 name: Regular Butyl
-permalink: /products/regular-butyl/
+layout: product-page
 supplier: nknh
-files:
-  - bk-1675n-sds.pdf
-  - bk-1675n-tds.pdf
-  - bk-1675p-food-grade-tds.pdf
+products:
+
+  - name: BK 1675N
+    tds: bk-1675n-tds.pdf
+    sds: bk-1675n-sds.pdf
+
+  - name: BK 1675P
+    tds: bk-1675p-food-grade-tds.pdf
 ---
-Regular Butyl

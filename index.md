@@ -5,5 +5,4 @@
 layout: index
 title: Home
 permalink: /
-menu: true
 ---

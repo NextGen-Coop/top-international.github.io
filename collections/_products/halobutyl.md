@@ -1,11 +1,22 @@
 ---
 name: Halobutyl
-permalink: /products/halobutyl/
+layout: product-page
 supplier: nknh
-files:
-  - bbk-bromobutyl-sds.pdf
-  - bbk-bromobutyl-tds.pdf
-  - cbk-chlorobutyl-sds.pdf
-  - cbk-chlorobutyl-tds.pdf
+products:
+
+  - name: BBK 232
+    tds: bbk-bromobutyl-tds.pdf
+    sds: bbk-bromobutyl-sds.pdf
+
+  - name: BBK 239
+    tds: bbk-bromobutyl-tds.pdf
+    sds: bbk-bromobutyl-sds.pdf
+
+  - name: BBK 246
+    tds: bbk-bromobutyl-tds.pdf
+    sds: bbk-bromobutyl-sds.pdf
+
+  - name: CBK 139
+    tds: cbk-chlorobutyl-tds.pdf
+    sds: cbk-chlorobutyl-sds.pdf
 ---
-Halobutyl

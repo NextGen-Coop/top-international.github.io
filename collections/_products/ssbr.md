@@ -1,9 +1,10 @@
 ---
 name: SSBR
-permalink: /products/ssbr/
+layout: product-page
 supplier: nknh
-files:
-  - dssk-2012-sds.pdf
-  - dssk-2012-tds.pdf
+products:
+
+  - name: DSSK-2012
+    tds: dssk-2012-tds.pdf
+    sds: dssk-2012-sds.pdf
 ---
-SSBR

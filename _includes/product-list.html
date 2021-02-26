@@ -4,7 +4,9 @@
       {% assign products = site.products | where: "supplier", supplier %}
       <ul>
       {% for product in products %}
-        <li>{{ product.name }}</li>
+        <li>
+          <a href="{{ product.url }}">{{ product.name }}</a>
+        </li>
       {% endfor %}
       </ul>
     {% endif %}

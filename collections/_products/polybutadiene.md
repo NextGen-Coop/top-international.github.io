@@ -1,10 +1,13 @@
 ---
 name: Polybutadiene
-permalink: /products/polybutadiene/
+layout: product-page
 supplier: nknh
-files:
-  - skdl-libr-tds.pdf
-  - skdn-ndbr-sds.pdf
-  - skdn-ndbr-tds.pdf
+products:
+
+  - name: SKDL (Lithium BR)
+    tds: skdl-libr-tds.pdf
+
+  - name: SKDN (Neodymium BR)
+    tds: skdn-ndbr-tds.pdf
+    sds: skdn-ndbr-sds.pdf
 ---
-Polybutadiene

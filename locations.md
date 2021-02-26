@@ -5,4 +5,11 @@ permalink: /locations/
 menu: true
 ---
 
-under construction
+**Headquarters:**
+* Akron, OH
+
+**Main Warehouse Locations:**
+* Norfolk, VA
+* Akron, OH
+* Houston, TX
+* Los Angeles, CA

@@ -32,10 +32,12 @@ collections:
     output: true
   products:
     output: true
+    permalink: /:collection/:name
   staff:
-    output: true
+    output: false
   suppliers:
     output: true
+    permalink: /:collection/:name
 
 # Build settings
 markdown: kramdown

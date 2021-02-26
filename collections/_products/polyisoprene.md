@@ -1,9 +1,14 @@
 ---
 name: Polyisoprene
-permalink: /products/polyisoprene/
+layout: product-page
 supplier: nknh
-files:
-  - ski-3-sds.pdf
-  - ski-3-tds.pdf
+products:
+
+  - name: SKI-3
+    tds: ski-3-tds.pdf
+    sds: ski-3-sds.pdf
+
+  - name: SKI-35
+    tds: ski-3-tds.pdf
+    sds: ski-3-sds.pdf
 ---
-Polyisoprene
