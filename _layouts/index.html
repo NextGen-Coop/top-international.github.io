@@ -8,9 +8,10 @@
     {% include header.html %}
 
     <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {% include markets-served.html %}
-      </div>
+      {% include slideshow.html
+        title="Markets We Serve"
+        collection="markets"
+      %}
     </main>
 
     {% include footer.html %}

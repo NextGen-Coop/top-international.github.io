@@ -3,8 +3,16 @@
   <h4>Contact</h4>
   <ul>
     <li><i class="icofont-location-pin"></i>{{ contact.address }}</li>
-    <li><i class="icofont-phone"></i>{{ contact.telephone }}</li>
-    <li><i class="icofont-smart-phone"></i>{{ contact.mobile }}</li>
+    <li><i class="icofont-phone"></i>
+      <a href="tel:{{ contact.telephone }}">
+        {{ contact.telephone }}
+      </a>
+    </li>
+    <li><i class="icofont-smart-phone"></i>
+      <a href="tel:{{ contact.mobile }}">
+        {{ contact.mobile }}
+      </a>
+    </li>
     <li><i class="icofont-fax"></i>{{ contact.fax }}</li>
   </ul>
 </div>
