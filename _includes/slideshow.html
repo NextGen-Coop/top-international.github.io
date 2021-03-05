@@ -1,22 +1,22 @@
 {% assign title = include.title %}
 {% assign collection = include.collection %}
-<section class="slideshow">
+<section class="slideshow-container">
 
   <h2 class="slideshow-title">{{ title }}</h2>
   {% comment %}
-    This is how to build a slideshow in Jekyll.
+  This is how to build a slideshow in Jekyll.
   {% endcomment %}
   {% if site[collection] %}
-  <slideshow class="{{ title | slugify: "latin" }}">
-  {% for item in site[collection] %}
-    <slide>
+  <div class="slideshow {{ title | slugify: "latin" }}">
+    <ul class="slides">
+      {% for item in site[collection] %}
       {% include slideshow-slide.html
         name=item.name
         background=item.background
         content=item.content %}
-    </slide>
-  {% endfor %}
-  </slideshow>
+      {% endfor %}
+    </ul>
+  </div>
   {% endif %}
 
-</section>
+  </section>

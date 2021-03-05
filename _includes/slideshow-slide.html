@@ -1,10 +1,10 @@
 {% assign name = include.name %}
 {% assign background = include.background %}
 {% assign content = include.content %}
-<div class="slideshow-slide"
-  style="background: url('../assets/img/{{ background }}'); background-size: cover;">
-  <p class="slideshow-title">{{ name }}</p>
+<li class="slide"
+  style="background-image: url('../assets/img/{{ background }}');">
+  <p class="slide-title">{{ name }}</p>
   {% if content %}
-    <p class="slideshow-caption">{{ content }}</p>
+    <p class="slide-caption">{{ content }}</p>
   {% endif %}
-</div>
+</li>

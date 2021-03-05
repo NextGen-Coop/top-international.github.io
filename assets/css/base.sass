@@ -12,42 +12,75 @@ $title_font: 'courier new', monospace
 $body_font: 'courier new', monospace
 $menu_font: 'Arial', 'Helvetica', sans-serif
 
+@import slideshow
+
 html
   width: 100%
+  height: 100%
   margin: 0
-
-header
-  background-color: $lightish
 
 body
   background-color: $lightish
   width: 100%
+  height: 100%
   margin: 0
   display: flex
   flex-flow: column nowrap
   color: $darkish
   font-weight: bold
-
-nav.site-nav
-  a:hover
-    color: $reddish
-
-footer
-  .wrapper
-    max-width: 80%
-  order: 3
-  background: right 5% no-repeat $reddish url(../img/wireframe-globe.png)
-  color: $lightish
-  h4, ul, p
+  header
+    background-color: $lightish
+  main
+    flex: 1 0 auto
+    height: 100%
+    ul.slides
+      margin: 0
+      display: block
+      width: 100%
+      height: 500px
+      li.slide
+        list-style-type: none
+        background-size: cover
+        background-position: center center
+        width: 100%
+        height: 100%
+    nav.site-nav
+      a:hover
+        color: $reddish
+    article
+      margin-top: 30px
+      .product-container
+        padding: 10px 0
+        .product-name
+          text-align: center
+        .product-tds, .product-sds
+          display: inline-table
+          padding: 5px 50px
+  footer
+    order: 3
+    flex-shrink: 0
+    background: right 5% no-repeat $reddish url(../img/wireframe-globe-33.png)
+    .wrapper
+      max-width: 90%
     color: $lightish
-  ul
-    list-style: none
-    i
-      padding-right: 2%
-      margin-left: -4%
-  .footer-col-wrapper
-    display: flex
-    justify-content: flex-start
-    align-items: stretch
-    .footer-col-2
-      flex-grow: 2
+    h4, ul, p
+      color: $lightish
+    ul
+      list-style: none
+      i
+        padding-right: 2%
+        margin-left: -4%
+    .footer-col-wrapper
+      display: flex
+      justify-content: flex-start
+      align-items: stretch
+      .footer-col-1
+        padding: 30px 0
+        flex-grow: 0.5
+        width: 15%
+      .footer-col-2
+        padding: 30px 0
+        flex-grow: 2
+
+.site-footer
+  padding: 0

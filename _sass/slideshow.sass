@@ -1,13 +1,18 @@
-*{box-sizing: border-box; -webkit-box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; font: 16px/1.3 sans-serif; }
+*
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+html, body
+  height: 100%
+body
+  margin: 0
+  font: 16px/1.3 sans-serif
 
-.home-region-content
+.slideshow
   position: relative
   overflow: hidden
   height: 100%
 /* SLIDER */
-  slideshow
+  .slides
     height: 100%
     white-space: nowrap
     font-size: 0
@@ -89,7 +94,7 @@ body { margin: 0; font: 16px/1.3 sans-serif; }
 
 /* PREV/NEXT CONTAINERS VISIBILITY */
 /* ALL: */
-.home-region-content >s:target ~ .prevNext >*
+.slideshow >s:target ~ .prevNext >*
   visibility: hidden
 /* ACTIVE: */
 #s1:target ~ .prevNext >*:nth-child(1)
@@ -104,16 +109,16 @@ body { margin: 0; font: 16px/1.3 sans-serif; }
 
 /* SLIDER ANIMATION POSITIONS */
 
-#s1:target ~ .slider
+#s1:target ~ .slide
   transform: translateX(0%)
   -webkit-transform: translateX(0%)
-#s2:target ~ .slider
+#s2:target ~ .slide
   transform: translateX(-100%)
   -webkit-transform: translateX(-100%)
-#s3:target ~ .slider
+#s3:target ~ .slide
   transform: translateX(-200%)
   -webkit-transform: translateX(-200%)
-#s4:target ~ .slider
+#s4:target ~ .slide
   transform: translateX(-300%)
   -webkit-transform: translateX(-300%)
 /* More slides? Add here more rules */
@@ -124,10 +129,10 @@ body { margin: 0; font: 16px/1.3 sans-serif; }
    All above was mainly to get it working :)
    CSSgal CUSTOM STYLES / OVERRIDES HERE: */
 
-.home-region-content
+.slideshow
   color: #fff
   text-align: center
-  slideshow h2
+  .slides h2
     margin-top: 40vh
     font-weight: 200
     letter-spacing: -0.06em

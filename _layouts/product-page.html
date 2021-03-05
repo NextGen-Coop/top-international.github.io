@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="product-page">
+<article class="product-page">
   {% assign title = page.name %}
   <h2 class="post-title">{{ title }}</h2>
   <div class="post-content">
@@ -19,6 +19,7 @@ layout: default
           {% if product.tds %}
             {% assign tds = product.tds | prepend: "/assets/products/" %}
             <div class="product-tds">
+              <p>Data Sheet</p>
               <a href="{{ tds | relative_url }}"
                 target="_blank">TDS</a>
             </div>
@@ -26,6 +27,7 @@ layout: default
           {% if product.sds %}
             {% assign sds = product.sds | prepend: "/assets/products/" %}
             <div class="product-sds">
+              <p>Safety Data Sheet</p>
               <a href="{{ sds | relative_url }}"
                 target="_blank">SDS</a>
             </div>
@@ -36,4 +38,4 @@ layout: default
     {% endif %}
   </div>
 
-</section>
+</article>
