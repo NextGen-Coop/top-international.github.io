@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Top International
-email: email@top.international
 description: >- # this means to ignore newlines until "baseurl:"
   We manufacture and distribute polymers and rubber compounds.
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -28,16 +27,15 @@ collections_dir: collections
 # collections lists each collection and sets options for each one.
 # output: true is required if pages need to be rendered for each item.
 collections:
+  permalink: /:collection/:name
   markets:
-    output: true
+    output: false
   products:
     output: true
-    permalink: /:collection/:name
   staff:
     output: false
   suppliers:
     output: true
-    permalink: /:collection/:name
 
 # Build settings
 markdown: kramdown

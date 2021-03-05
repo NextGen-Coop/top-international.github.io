@@ -1,5 +1,5 @@
 ---
 name: Custom Rubber Compounding
-permalink: /markets/custom-rubber-compounding/
-layout: page
+background: material-1920.jpg
 ---
+A little about our experience in {{ page.name }}

@@ -1,5 +1,5 @@
 ---
 name: Tire Manufacturing Industry
-permalink: /markets/tire-manufacturing-industry/
-layout: page
+background: auto-1280.jpg
 ---
+A little about our experience in {{ page.name }}
