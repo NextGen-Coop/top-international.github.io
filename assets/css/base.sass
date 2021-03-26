@@ -1,17 +1,20 @@
 ---
 ---
 $darkish: #080809
+$blueish: rgb(23, 74, 156)
 $reddish: rgb(200, 50, 50)
 $lightish: rgb(250,250,250)
 $footer_font_color: $lightish
-$footer_bg: $reddish
+$footer_bg: $blueish
 $main_bg: #f5deb3
 $nav_bg: #666666
+$link_color: rgb(31, 155, 196)
 $author_bg: rgba(227, 242, 243, .75)
 $title_font: 'courier new', monospace
 $body_font: 'courier new', monospace
 $menu_font: 'Arial', 'Helvetica', sans-serif
 
+@import fonts
 @import slideshow
 
 html
@@ -30,13 +33,35 @@ body
   font-weight: bold
   header
     background-color: $lightish
-    padding: 20px 0
     box-shadow: 0px 1px 30px -10px #000
     z-index: 10
+    height: 100px
+    .wrapper
+      max-width: calc(1000px - (30px * 2))
+      height: 100%
+      display: flex
+      justify-content: space-between
+      .site-title
+        display: flex
+        align-items: center
     &.site-header
-      min-height: auto
+      align-items: center
       position: fixed
       width: 100%
+    .site-nav
+      display: flex
+      align-items: center
+      .trigger
+        height: 100%
+        display: flex
+        .menu-link
+          align-items: center
+          display: flex
+          justify-content: space-evenly
+          margin: 0 15px
+      .page-link
+        color: $blueish
+        font-family: $font_prompt
   main
     z-index: 9
     flex: 1 0 auto
@@ -62,9 +87,6 @@ body
         height: 100%
         h3
           padding-top: 200px
-    nav.site-nav
-      a:hover
-        color: $reddish
     article
       margin-top: 30px
       .product-container
@@ -78,7 +100,7 @@ body
     z-index: 8
     order: 3
     flex-shrink: 0
-    background: right 5% no-repeat $reddish url(../img/wireframe-globe-33.png)
+    background: right 5% no-repeat $blueish url(../img/wireframe-globe-33.png)
     .wrapper
       max-width: 90%
     color: $lightish

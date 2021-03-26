@@ -13,7 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Top International
+title: TOP International
+long_title: Tangolin Overseas Products International
 description: >- # this means to ignore newlines until "baseurl:"
   We manufacture and distribute polymers and rubber compounds.
 baseurl: "/" # the subpath of your site, e.g. /blog

@@ -1,6 +1,6 @@
 ---
-title: Suppliers
-permalink: /suppliers/
+title: Suppliers & Products
+permalink: /suppliers-products/
 layout: collection-page
 collection: suppliers
 menu: true
