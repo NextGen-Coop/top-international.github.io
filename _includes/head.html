@@ -7,6 +7,7 @@
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/ico/favicon.ico">
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/ico/favicon.ico">
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/favicon.ico">
@@ -27,8 +28,8 @@
 
   <link rel="stylesheet" href="{{ "/assets/css/icofont.min.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
   <link rel="stylesheet" href="{{ "/assets/css/base.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 {% if site.rss %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
