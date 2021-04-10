@@ -1,0 +1,14 @@
+{% assign title = include.title %}
+{% assign content = include.content %}
+<section class="block-container">
+  {% comment %}
+  This is how to build a generic reusable block in Jekyll.
+  {% endcomment %}
+  {% if content %}
+  <div class="{{ title | slugify: "latin" }}">
+    <h2 class="block-title">{{ title }}</h2>
+    {{ content }}
+  </div>
+  {% endif %}
+
+  </section>

@@ -1,10 +1,12 @@
 {% assign name = include.name %}
-{% assign background = include.background %}
+{% assign background = include.background | prepend: "assets/img/" %}
 {% assign content = include.content %}
-<li class="slide"
-  style="background-image: url('../assets/img/{{ background }}');">
-  <h3 class="slide-title">{{ name }}</h3>
-  {% if content %}
-    <p class="slide-caption">{{ content }}</p>
-  {% endif %}
-</li>
+<div class="slide">
+  <div class="caption">
+    <strong class="slide-title">{{ name }}</strong>
+    {% if content %}
+      <p class="slide-caption">{{ content }}</p>
+    {% endif %}
+  </div>
+  <img src="{{ background }}" width="100%">
+</div>
