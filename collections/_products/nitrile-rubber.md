@@ -37,3 +37,4 @@ products:
 
   - name: NBR 4065
 ---
+Sibur produces a full range of high quality NBR baled products at its Krasnoyarsk, Russia facility.  TOP International supplies these products to the North American market either from various US warehouse locations or via direct shipment.

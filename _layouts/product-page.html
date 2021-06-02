@@ -16,6 +16,11 @@ layout: default
           <div class="product-name">
             {{ product.name }}
           </div>
+          {% if product.description %}
+          <div class="product-description">
+            {{ product.description }}
+          </div>
+          {% endif %}
           {% if product.tds %}
             {% assign tds = product.tds | prepend: "/assets/products/" %}
             <div class="product-tds">

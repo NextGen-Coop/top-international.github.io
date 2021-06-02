@@ -1,0 +1,19 @@
+<section class="about-staff">
+    {% if site.staff %}
+      {% assign staffers = site.staff %}
+      <ul>
+      {% for staffer in staffers %}
+        <li>
+          <p>{{ staffer.name }}, {{ staffer.position }}</p>
+          <li>
+          {% if staffer.email %}
+            <ul><a href="mailto:{{ staffer.email }}">Email</a></ul>
+          {% endif %}
+          {% if staffer.telephone %}
+            <ul><a href="tel:{{ staffer.telephone }}">Office</a></ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+</section>

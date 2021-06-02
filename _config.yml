@@ -34,10 +34,13 @@ collections:
     output: false
   products:
     output: true
+    permalink: /suppliers-products/:name
   staff:
     output: false
+    permalink: /about/:collection/:name
   suppliers:
     output: true
+    permalink: /suppliers-products/:name
 
 # Build settings
 markdown: kramdown
