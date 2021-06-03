@@ -17,7 +17,7 @@ title: TOP International
 long_title: Tangolin Overseas Products International
 description: >- # this means to ignore newlines until "baseurl:"
   We manufacture and distribute polymers and rubber compounds.
-baseurl: "/top-international.github.io" # the subpath of your site, e.g. /blog
+baseurl: "/top-international.github.io/" # the subpath of your site, e.g. /blog
 # url: "https://top.international" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 theme_color: 174a9c
