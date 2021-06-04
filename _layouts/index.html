@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
   {% include head.html %}
-
   <body>
-
     {% include header.html %}
-
     <main aria-label="Content" class="home">
       {% include slideshow.html
         title="Markets We Serve"
         collection="markets"
       %}
+      <h3>Distributed Products</h3>
+      {% assign suppliers = site.suppliers | map: "uuid" %}
+      {% for supplier in suppliers %}
+        <div class="product-list">
+          {% include product-list.html supplier=supplier.uuid %}
+        </div>
+      {% endfor %}
     </main>
-
     {% include footer.html %}
-
   </body>
-
 </html>
