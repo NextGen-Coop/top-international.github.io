@@ -9,7 +9,7 @@ products:
     tds: ski-3-tds.pdf
     sds: ski-3-sds.pdf
 
-  - name: IR 980L
+  - name: IR 980NS
     description: Non-staining polyisoprene for use in color sensitive applications
     tds: ski-3-tds.pdf
     sds: ski-3-sds.pdf
