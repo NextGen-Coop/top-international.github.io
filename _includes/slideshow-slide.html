@@ -4,9 +4,9 @@
 <div class="slide">
   <div class="caption">
     <strong class="slide-title">{{ name }}</strong>
-    {% if content %}
+    {% unless content %}
       <p class="slide-caption">{{ content }}</p>
-    {% endif %}
+    {% endunless %}
   </div>
   <img src="{{ background }}" width="100%">
 </div>
