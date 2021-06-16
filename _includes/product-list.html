@@ -1,4 +1,4 @@
-<section class="product-list">
+<div class="product-list">
     {% if site.products %}
       {% assign supplier = include.supplier %}
       {% assign products = site.products | where: "supplier", supplier %}
@@ -10,4 +10,4 @@
       {% endfor %}
       </ul>
     {% endif %}
-</section>
+</div>

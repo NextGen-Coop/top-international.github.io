@@ -4,13 +4,15 @@
   This is how to build a slideshow in Jekyll.
 {% endcomment %}
 {% if site[collection] %}
-<h2 class="slideshow-title">{{ title }}</h2>
-<div class="slideshow {{ title | slugify: "latin" }}">
-  {% for item in site[collection] %}
-    {% include slideshow-slide.html
-      name=item.name
-      background=item.background
-      content=item.content %}
-  {% endfor %}
-</div>
+<section class="slideshow-container">
+  <h2 class="slideshow-title">{{ title }}</h2>
+  <div class="slideshow {{ title | slugify: "latin" }}">
+    {% for item in site[collection] %}
+      {% include slideshow-slide.html
+        name=item.name
+        background=item.background
+        content=item.content %}
+    {% endfor %}
+  </div>
+</section>
 {% endif %}

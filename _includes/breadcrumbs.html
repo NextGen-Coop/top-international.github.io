@@ -3,7 +3,7 @@
 <a href="{{ site.baseurl }}">Home</a>
 {% for crumb in crumbs offset: 1 %}
   {% if forloop.last %}
-    | {{ page.title }}
+    | <h2>{{ page.title }}</h2>
   {% else %}
     {% assign url = site.baseurl | append: crumb %}
     | <a href="{{ url }}">{{ crumb | replace: '-', ' ' | replace: 'suppliers products', 'Suppliers & Products' | remove: '.html' | capitalize }}</a>

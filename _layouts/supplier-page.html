@@ -2,15 +2,10 @@
 layout: default
 ---
 <article class="collection-page">
-
-  <h2 class="post-title">{{ page.title | escape }}</h2>
-
   <div class="post-content">
     {{ content }}
   </div>
-
   <div class="product-list">
     {% include product-list.html supplier=page.uuid %}
   </div>
-
 </article>

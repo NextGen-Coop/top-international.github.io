@@ -4,17 +4,19 @@
   <body>
     {% include header.html %}
     <main aria-label="Content" class="home">
-      {% include slideshow.html
-        title="Markets We Serve"
-        collection="markets"
-      %}
-      <h3>Distributed Products</h3>
-      {% assign suppliers = site.suppliers | map: "uuid" %}
-      {% for supplier in suppliers %}
-        <div class="product-list">
-          {% include product-list.html supplier=supplier.uuid %}
-        </div>
-      {% endfor %}
+      <div class="home-wrapper">
+        {% include slideshow.html
+          title="Markets We Serve"
+          collection="markets"
+          %}
+        <section class="distributed-products">
+          <h3>Products We Distribute</h3>
+          {% assign suppliers = site.suppliers | map: "uuid" %}
+          {% for supplier in suppliers %}
+            {% include product-list.html supplier=supplier.uuid %}
+          {% endfor %}
+        </section>
+      </div>
     </main>
     {% include footer.html %}
   </body>

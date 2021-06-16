@@ -3,7 +3,6 @@ layout: default
 ---
 <article class="product-page">
   {% assign title = page.name %}
-  <h2 class="post-title">{{ title }}</h2>
   <div class="post-content">
     {% if content %}
       <p>{{ content }}</p>
@@ -13,34 +12,33 @@ layout: default
       <section>
       {% for product in product_type.products %}
         <div class="product-container">
-          <div class="product-name">
-            {{ product.name }}
-          </div>
-          {% if product.description %}
-          <div class="product-description">
-            {{ product.description }}
-          </div>
-          {% endif %}
-          {% if product.tds %}
-            {% assign tds = product.tds | prepend: "/assets/products/" %}
-            <div class="product-tds">
-              <p>Data Sheet</p>
-              <a href="{{ tds | relative_url }}"
-                target="_blank">TDS</a>
+          <div class="product-data">
+            <h5 class="product-name">{{ product.name }}</h5>
+            {% if product.description %}
+            <div class="product-description">
+              <p>{{ product.description }}</p>
             </div>
-          {% endif %}
-          {% if product.sds %}
-            {% assign sds = product.sds | prepend: "/assets/products/" %}
-            <div class="product-sds">
-              <p>Safety Data Sheet</p>
-              <a href="{{ sds | relative_url }}"
-                target="_blank">SDS</a>
-            </div>
-          {% endif %}
+            {% endif %}
+          </div>
+          <div class="product-files">
+            {% if product.tds %}
+              {% assign tds = product.tds | prepend: "/assets/products/" %}
+              <div class="product-tds">
+                <p>Data Sheet</p>
+                <a href="{{ tds | relative_url }}" target="_blank">TDS</a>
+              </div>
+            {% endif %}
+            {% if product.sds %}
+              {% assign sds = product.sds | prepend: "/assets/products/" %}
+              <div class="product-sds">
+                <p>Safety Data Sheet</p>
+                <a href="{{ sds | relative_url }}" target="_blank">SDS</a>
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endfor %}
       </section>
     {% endif %}
   </div>
-
 </article>
