@@ -56,10 +56,12 @@ body
       align-items: center
       position: fixed
       width: 100%
-      background: rgba(255, 255, 255, 0.9)
       .page-link
         color: $blueish
         font-family: $font_prompt
+    &.blur
+      background-color: rgba(255, 255, 255, 0.9)
+
     @include breakpoint(desktop)
       .site-nav
         display: flex
@@ -84,6 +86,7 @@ body
     &.page
       padding-top: 200px
       background: right 5% no-repeat $lightish url(../img/merlion-trans.png)
+      background-attachment: fixed
       background-size: contain
       .wrapper
         max-width: calc(1200px - (30px * 2))
@@ -92,28 +95,29 @@ body
       letter-spacing: 3px
       font-family: $font_prompt
       text-transform: uppercase
-    .static-page
+    .blur
       border-radius: 12px
-      background: $lightish
+      background-color: rgba(255, 255, 255, 0.9)
     h2
-      .slideshow-title
-        text-align: right
-        background: $lightish_trans
-        position: absolute
-        top: 120px
-        right: 0px
-        z-index: 100
-        padding: 5px 25px
-        border-radius: 15px 0px 0px 15px
-        @include breakpoint(desktop)
-          font-size: 250%
-          top: 200px
-          padding: 10px 100px
       font-family: $font_yantramanav
       color: $blueish
       display: inline
     .slideshow-container
       margin-bottom: -50px
+      h2
+        &.slideshow-title
+          text-align: right
+          background: $lightish_trans
+          display: block
+          position: absolute
+          top: 15vh
+          right: 0px
+          z-index: 100
+          padding: 5px 25px
+          border-radius: 15px 0px 0px 15px
+          @include breakpoint(desktop)
+            font-size: 250%
+            padding: 10px 100px
     .slideshow
       .slide
         width: 100%
@@ -148,7 +152,6 @@ body
             padding: 5px 15px
     article
       border: 2px solid $blueish
-      backdrop-filter: blur(5px)
       padding: 30px
       margin-top: 30px
       .product-container
@@ -169,6 +172,8 @@ body
     color: $lightish
     h4, ul, p
       color: $lightish
+    .footer-region-content
+      margin-left: 30px
     ul
       list-style: none
       i
@@ -180,11 +185,20 @@ body
       align-items: stretch
       .footer-col-1
         padding: 30px 0
-        flex-grow: 0.5
-        width: 15%
-      .footer-col-2
-        padding: 30px 0
-        flex-grow: 2
+        flex-grow: 1
+        width: 75%
 
 .site-footer
   padding: 0
+
+/* Crufty stuff, needs better browser support. */
+@supports (backdrop-filter: blur(1em))
+  body
+    main
+      .blur
+        background-color: rgba(255, 255, 255, 0.5)
+        backdrop-filter: blur(1em)
+    header
+      &.blur
+        background-color: rgba(255, 255, 255, 0.5)
+        backdrop-filter: blur(1em)

@@ -27,7 +27,7 @@ menu: true
       placeholder="Subject">
   </p>
   <label for="message">How can we help you?</label><br>
-  <textarea id="message" name="message" rows="5" cols="92" required
+  <textarea id="message" name="message" rows="5" required
     placeholder="How can we help you?"></textarea>
   <p>
     <input type="submit" value="Send">
