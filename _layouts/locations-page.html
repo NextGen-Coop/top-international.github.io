@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="static-page blur">
+  <div class="post-content">
+    <section class="locations-map">
+      <div class="map">
+        <img src="{{ page.map_url | relative_url }}" alt="Location Map" />
+      </div>
+      <div class="locations">
+        {{ content }}
+      </div>
+    </section>
+  </div>
+</article>

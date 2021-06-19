@@ -59,10 +59,7 @@ body
       .page-link
         color: $blueish
         font-family: $font_prompt
-    &.blur
-      background-color: rgba(255, 255, 255, 0.9)
-
-    @include breakpoint(desktop)
+    @include breakpoint(tablet)
       .site-nav
         display: flex
         align-items: center
@@ -84,7 +81,7 @@ body
       @include breakpoint(desktop)
         margin-top: -20px
     &.page
-      padding-top: 200px
+      padding-top: 20vh
       background: right 5% no-repeat $lightish url(../img/merlion-trans.png)
       background-attachment: fixed
       background-size: contain
@@ -95,15 +92,23 @@ body
       letter-spacing: 3px
       font-family: $font_prompt
       text-transform: uppercase
-    .blur
+    .static-page
       border-radius: 12px
-      background-color: rgba(255, 255, 255, 0.9)
+      @include breakpoint(mobile)
+        margin-bottom: 2vh
+      @include breakpoint(tablet)
+        margin-bottom: 10vh
     h2
       font-family: $font_yantramanav
       color: $blueish
       display: inline
     .slideshow-container
-      margin-bottom: -50px
+      margin-top: -10vh
+      margin-bottom: -5vh
+      @include breakpoint(mobile)
+        margin-top: -10vh
+      @include breakpoint(tablet)
+        margin-top: 0vh
       h2
         &.slideshow-title
           text-align: right
@@ -138,8 +143,11 @@ body
             padding: 10px 50px
         img
           object-fit: cover
-          height: 60vh
           width: 100%
+          @include breakpoint(mobile)
+            height: 60vh
+          @include breakpoint(tablet)
+            height: 80vh
     .distributed-products
       margin: 0 auto
       max-width: 80%
@@ -191,14 +199,19 @@ body
 .site-footer
   padding: 0
 
+.locations-map
+  display: flex
+  justify-content: flex-start
+  align-items: space-between
+  .map
+    flex-grow: 2
+  .locations
+    flex-shrink: 1
+
 /* Crufty stuff, needs better browser support. */
+.blur
+  background-color: rgba(255, 255, 255, 0.9)
 @supports (backdrop-filter: blur(1em))
-  body
-    main
-      .blur
-        background-color: rgba(255, 255, 255, 0.5)
-        backdrop-filter: blur(1em)
-    header
-      &.blur
-        background-color: rgba(255, 255, 255, 0.5)
-        backdrop-filter: blur(1em)
+  .blur
+    background-color: rgba(255, 255, 255, 0.5)
+    backdrop-filter: blur(1em)
