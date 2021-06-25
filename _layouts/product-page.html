@@ -8,6 +8,7 @@ layout: default
       <p>{{ content }}</p>
     {% endif %}
     {% assign product_type = site.products | where: "name", title | first %}
+    {% assign pdf_icon = "/assets/ico/file-pdf.svg" %}
     {% if product_type %}
       <section>
       {% for product in product_type.products %}
@@ -25,14 +26,16 @@ layout: default
               {% assign tds = product.tds | prepend: "/assets/products/" %}
               <div class="product-tds">
                 <p>Data Sheet</p>
-                <a href="{{ tds | relative_url }}" target="_blank">TDS</a>
+                <a href="{{ tds | relative_url }}" target="_blank">
+                  <img src="{{ pdf_icon | relative_url }}" alt="pdf" /> TDS</a>
               </div>
             {% endif %}
             {% if product.sds %}
               {% assign sds = product.sds | prepend: "/assets/products/" %}
               <div class="product-sds">
                 <p>Safety Data Sheet</p>
-                <a href="{{ sds | relative_url }}" target="_blank">SDS</a>
+                <a href="{{ sds | relative_url }}" target="_blank">
+                  <img src="{{ pdf_icon | relative_url }}" alt="pdf" /> SDS</a>
               </div>
             {% endif %}
           </div>

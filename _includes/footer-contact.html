@@ -1,18 +1,20 @@
 {% assign contact = site.data.contact %}
+{% assign location_icon = "/assets/ico/location-pin.svg" %}
+{% assign phone_icon = "/assets/ico/ui-call.svg" %}
+{% assign mobile_icon = "/assets/ico/android-nexus.svg" %}
+{% assign fax_icon = "/assets/ico/fax.svg" %}
 <div class="footer-region-content">
   <h4>Contact</h4>
   <ul>
-    <li><i class="icofont-location-pin"></i>{{ contact.address }}</li>
-    <li><i class="icofont-phone"></i>
-      <a href="tel:{{ contact.telephone }}">
-        {{ contact.telephone }}
-      </a>
+    <li><img src="{{ location_icon | relative_url }}" alt="location" />
+      {{ contact.address }}</li>
+    <li><img src="{{ phone_icon | relative_url }}" alt="telephone" />
+      <a href="tel:{{ contact.telephone }}">{{ contact.telephone }}</a>
     </li>
-    <li><i class="icofont-smart-phone"></i>
-      <a href="tel:{{ contact.mobile }}">
-        {{ contact.mobile }}
-      </a>
+    <li><img src="{{ mobile_icon | relative_url }}" alt="mobile" />
+      <a href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
     </li>
-    <li><i class="icofont-fax"></i>{{ contact.fax }}</li>
+    <li><img src="{{ fax_icon | relative_url }}" alt="fax" />
+      {{ contact.fax }}</li>
   </ul>
 </div>
