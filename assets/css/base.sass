@@ -32,6 +32,7 @@ body
   flex-flow: column nowrap
   color: $darkish
   font-weight: bold
+  font-family: $font_dm
   font-size: calc(10px + .8vw)
   h5
     color: $blueish
@@ -227,6 +228,20 @@ body
     flex-grow: 2
   .locations
     flex-shrink: 1
+
+.about-staff
+  padding: 15px
+  .staff
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: space-evenly
+    @include breakpoint(mobile)
+      flex-flow: column
+    .staff-member
+      padding: 5px 0
+      flex-basis: auto
+      width: 50%
 
 .product-container
   display: flex
