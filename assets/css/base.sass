@@ -90,9 +90,18 @@ body
         margin-top: -20px
     &.page
       padding-top: 20vh
-      background: right 5% no-repeat $lightish url(../img/merlion-trans.png)
-      background-attachment: fixed
-      background-size: contain
+      &::after
+        content: ""
+        background: right 5% no-repeat $lightish url(../img/merlion.png)
+        background-attachment: fixed
+        background-size: contain
+        opacity: 0.1
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        position: absolute
+        z-index: -1
       .wrapper
         max-width: calc(1200px - (30px * 2))
     #breadcrumbs
@@ -172,7 +181,7 @@ body
       margin-top: 30px
 
   footer
-    z-index: 8
+    z-index: 1
     order: 3
     flex-shrink: 0
     background: right 5% no-repeat $blueish url(../img/wireframe-globe-33.png)
