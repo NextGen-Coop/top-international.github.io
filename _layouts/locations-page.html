@@ -4,9 +4,11 @@ layout: default
 <article class="static-page blur">
   <div class="post-content">
     <section class="locations-map">
-      <div class="map">
-        <img src="{{ page.map_url | relative_url }}" alt="Location Map" />
-      </div>
+      {% include map.html
+        primary=page.primary_coords
+        primary_color=page.primary_color
+        secondary=page.secondary_coords
+        secondary_color=page.secondary_color %}
       <div class="locations">
         {{ content }}
       </div>
