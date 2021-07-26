@@ -70,11 +70,12 @@
   <polyline id="polyline138" stroke="#000" points="45.95 38.96 35.09 37.1 37.61 23.94 43.41 25 42.95 27.65 47.14 28.16 45.95 38.96" stroke-miterlimit="10" stroke-width=".28222" fill="none"/>
   <polyline id="polyline140" stroke="#000" points="101.88 36.4 102.3 37.49 103.78 37.81 104.7 37.48 105.61 36.81 106.2 36.07 106.53 34.81 106.94 34.07 107.44 33.48 108.1 33.57 108.27 32.98 108.6 32.24 109.36 31.15 109.85 30.41 111.1 31.32 111.52 31.41 110.85 30.82 109.77 30.15 107.11 31.41 107.11 30.11 104.72 30.55 104.26 28.15 104.12 30.82 103.54 31.91 102.54 32.41 101.62 33.9 101.38 34.9 101.88 36.4" stroke-miterlimit="10" stroke-width=".28222" fill="none"/>
   {% assign primary = include.primary %}
+  {% assign primary_color = include.primary_color %}
   {% unless primary == empty %}
     <symbol id="primaryMarker" width="10" height="10" viewBox="0 0 250 250">
       <polygon points="100,10 40,180 190,60 10,60 160,180"
-        fill="yellow"
-        stroke="yellow"/>
+        fill="#{{ primary_color }}"
+        stroke="#{{ primary_color }}"/>
     </symbol>
     {% for primary_coords in primary %}
       {% assign prim_xy = primary_coords | split: "," %}
