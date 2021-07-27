@@ -5,4 +5,5 @@
 layout: index
 title: Home
 permalink: /
+has_slideshow: true
 ---
