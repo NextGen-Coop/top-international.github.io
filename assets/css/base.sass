@@ -267,6 +267,41 @@ body
         img
           filter: invert(100%)
           transition: .3s
+
+.contact-form
+  margin: 0 auto
+  p#contact-form-status
+    visibility: hidden
+    border-radius: 5px
+    &.success
+      visibility: visible
+      padding: 10px
+      background-color: rgba(141, 221, 141, 0.5)
+    &.error
+      visibility: visible
+      padding: 10px
+      background-color: rgba(221, 141, 141, 0.5)
+  form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    align-items: space-evenly
+    @include breakpoint(mobile)
+      flex-flow: column
+    div
+      padding: 5px 0
+      flex-basis: auto
+      width: 45%
+      input
+        float: right
+      textarea
+        width: 100%
+      .flex-column
+        width: 100%
+        flex-flow: column
+        .submit-button
+          margin: 10px auto
+
 /* Crufty stuff, needs better browser support. */
 .blur
   background-color: rgba(255, 255, 255, 0.9)
